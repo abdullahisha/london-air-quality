@@ -1,0 +1,46 @@
+{
+    "HourlyAirQualityIndex": {
+        "@TimeToLive": "32",
+        "LocalAuthority": {
+            "@LocalAuthorityName": "Westminster",
+            "@LocalAuthorityCode": "33",
+            "@LaCentreLatitude": "51.509645",
+            "@LaCentreLongitude": "-0.158586",
+            "@LaCentreLongitudeWGS84": "-17653.712767",
+            "@LaCentreLatitudeWGS84": "6711944.006712",
+            "Site": {
+                "@LatitudeWGS84": "6714250.73471",
+                "@LongitudeWGS84": "-17208.8800817",
+                "@Longitude": "-0.15459",
+                "@Latitude": "51.52254",
+                "@SiteType": "Kerbside",
+                "@SiteCode": "MY1",
+                "@SiteName": "Westminster - Marylebone Road",
+                "@BulletinDate": "2026-10-27 21:00:00",
+                "species": [
+                    {
+                        "@SpeciesName": "Nitrogen Dioxide",
+                        "@SpeciesCode": "NO2",
+                        "@AirQualityIndex": "1",
+                        "@AirQualityBand": "Low",
+                        "@IndexSource": "Measurement"
+                    },
+                    {
+                        "@SpeciesName": "Ozone",
+                        "@SpeciesCode": "O3",
+                        "@AirQualityIndex": "1",
+                        "@AirQualityBand": "Low",
+                        "@IndexSource": "Measurement"
+                    },
+                    {
+                        "@SpeciesName": "Sulphur Dioxide",
+                        "@SpeciesCode": "SO2",
+                        "@AirQualityIndex": "0",
+                        "@AirQualityBand": "No data",
+                        "@IndexSource": "Measurement"
+                    }
+                ]
+            }
+        }
+    }
+}
