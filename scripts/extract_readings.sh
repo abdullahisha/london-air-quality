@@ -2,7 +2,7 @@
 cd "$(dirname "$0")/.."
 mkdir -p data/raw/readings
 
-START=$(date -v-30d +%Y-%m-%d)
+START=$(date -v-30d +%Y-%m-%d 2>/dev/null || date -d '30 days ago' +%Y-%m-%d)
 END=$(date +%Y-%m-%d)
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
 
