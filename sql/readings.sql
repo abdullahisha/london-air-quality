@@ -11,8 +11,12 @@ SELECT
   r.RawAQData."@SiteCode",
   r.RawAQData."@SpeciesCode",
   d."@MeasurementDateGMT",
-  CAST(NULLIF(d."@Value", '') AS DOUBLE)
-FROM read_json('data/raw/readings/*.json') AS r,
+  CAST(d."@Value" AS DOUBLE)
+FROM read_json('data/raw/readings/*.json', filename = true) AS r,
      unnest(r.RawAQData.Data) AS t(d)
-     WHERE d."@Value" <> ''
+WHERE d."@Value" <> ''
+QUALIFY ROW_NUMBER() OVER (
+  PARTITION BY r.RawAQData."@SiteCode", r.RawAQData."@SpeciesCode", d."@MeasurementDateGMT"
+  ORDER BY r.filename DESC
+) = 1
 ON CONFLICT DO NOTHING;
